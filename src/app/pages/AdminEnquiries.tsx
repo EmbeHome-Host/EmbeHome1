@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { LogOut, Trash2, Users, Home, Settings } from "lucide-react";
 import { useAuth } from "../lib/AdminAuth";
-import BrandLogo from "../components/BrandLogo";
+import { BrandMark } from "../components/BrandLogo";
 import {
   useEnquiries,
   Enquiry,
@@ -283,10 +283,7 @@ export default function AdminEnquiries() {
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-3">
-              <BrandLogo size="sm" priority />
-              <p className="text-gray-500 text-sm font-medium">Admin Panel</p>
-            </div>
+            <BrandMark size="sm" priority subtitle="Admin Panel" />
             <button
               onClick={handleLogout}
               className="flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-200 text-gray-600 hover:bg-gray-50 transition-colors text-sm font-medium"

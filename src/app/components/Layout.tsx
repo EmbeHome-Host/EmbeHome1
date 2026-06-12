@@ -1,7 +1,7 @@
 import { Outlet, Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import BrandLogo from "./BrandLogo";
+import { BrandMark } from "./BrandLogo";
 
 export default function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,10 +25,15 @@ export default function Layout() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-[4.5rem] sm:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <BrandLogo size="md" priority className="sm:h-12" />
+              <BrandMark
+                size="lg"
+                priority
+                logoClassName="h-12 sm:h-16"
+                titleClassName="text-xl font-bold tracking-tight leading-none text-gray-900"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -92,7 +97,11 @@ export default function Layout() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="mb-4">
-                <BrandLogo size="lg" className="sm:h-16 brightness-0 invert opacity-95" />
+                <BrandMark
+                  size="lg"
+                  inverse
+                  logoClassName="sm:h-16 brightness-0 invert opacity-95"
+                />
               </div>
               <p className="text-sm text-gray-400 max-w-md">
                 EmbeHome Automations and Technologies Pvt Ltd - Building smart home automation products and technology solutions across IoT, firmware, mobile apps, web dashboards, cloud, backend, databases, analytics, OEM support, and AI video creation.

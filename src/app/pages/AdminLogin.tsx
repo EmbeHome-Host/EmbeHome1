@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Lock, Eye, EyeOff, ShieldCheck } from "lucide-react";
 import { useAuth } from "../lib/AdminAuth";
-import BrandLogo from "../components/BrandLogo";
+import { BrandMark } from "../components/BrandLogo";
 
 export default function AdminLogin() {
   const { login } = useAuth();
@@ -47,10 +47,7 @@ export default function AdminLogin() {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-8 sm:p-10">
           <div className="flex flex-col items-center mb-8">
-            <BrandLogo size="xl" priority className="mb-2" />
-            <span className="text-[10px] text-[#009A9A] font-medium tracking-widest uppercase">
-              Admin Portal
-            </span>
+            <BrandMark size="xl" priority layout="column" subtitle="Admin Portal" />
           </div>
 
           <div className="text-center mb-8">

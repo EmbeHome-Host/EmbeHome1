@@ -1,7 +1,7 @@
 import { Outlet, Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import embehomeLogo from "@/assets/embehome-logo.png";
+import BrandLogo from "./BrandLogo";
 
 export default function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,20 +27,8 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
-              <img
-                src={embehomeLogo}
-                alt="EmbeHome Automations"
-                width={52}
-                height={52}
-                fetchPriority="high"
-                decoding="async"
-                className="h-11 w-11 sm:h-[52px] sm:w-[52px] object-contain shrink-0 bg-transparent"
-              />
-              <div className="flex flex-col leading-none">
-                <span className="text-lg font-bold text-gray-900 tracking-tight">EmbeHome</span>
-                <span className="text-[10px] text-[#009A9A] font-medium tracking-widest uppercase">Automations</span>
-              </div>
+            <Link to="/" className="flex items-center">
+              <BrandLogo size="md" priority className="sm:h-12" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -103,20 +91,8 @@ export default function Layout() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center gap-3 mb-4">
-                <img
-                  src={embehomeLogo}
-                  alt="EmbeHome Automations"
-                  width={56}
-                  height={56}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-12 w-12 sm:h-14 sm:w-14 object-contain shrink-0 bg-transparent"
-                />
-                <div className="flex flex-col leading-none">
-                  <span className="text-lg font-bold text-white tracking-tight">EmbeHome</span>
-                  <span className="text-[10px] text-[#009A9A] font-medium tracking-widest uppercase">Automations</span>
-                </div>
+              <div className="mb-4">
+                <BrandLogo size="lg" className="sm:h-16 brightness-0 invert opacity-95" />
               </div>
               <p className="text-sm text-gray-400 max-w-md">
                 EmbeHome Automations and Technologies Pvt Ltd - Building smart home automation products and technology solutions across IoT, firmware, mobile apps, web dashboards, cloud, backend, databases, analytics, OEM support, and AI video creation.

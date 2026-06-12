@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Lock, Eye, EyeOff, ShieldCheck } from "lucide-react";
 import { useAuth } from "../lib/AdminAuth";
+import BrandLogo from "../components/BrandLogo";
 
 export default function AdminLogin() {
   const { login } = useAuth();
@@ -11,6 +12,10 @@ export default function AdminLogin() {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    document.title = "Admin Login | EmbeHome";
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,14 +47,9 @@ export default function AdminLogin() {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-8 sm:p-10">
           <div className="flex flex-col items-center mb-8">
-            <div
-              className="w-14 h-14 rounded-2xl flex items-center justify-center text-white font-bold text-2xl mb-4 shadow-sm"
-              style={{ backgroundColor: "#009A9A" }}
-            >
-              E
-            </div>
-            <span className="font-semibold text-gray-900 text-xl tracking-tight">
-              EmbeHome
+            <BrandLogo size="xl" priority className="mb-2" />
+            <span className="text-[10px] text-[#009A9A] font-medium tracking-widest uppercase">
+              Admin Portal
             </span>
           </div>
 

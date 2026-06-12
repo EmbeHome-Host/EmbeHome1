@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { LogOut, Trash2, Users, Home, Settings } from "lucide-react";
 import { useAuth } from "../lib/AdminAuth";
+import BrandLogo from "../components/BrandLogo";
 import {
   useEnquiries,
   Enquiry,
@@ -240,6 +241,10 @@ export default function AdminEnquiries() {
   const [deletingId, setDeletingId] = useState<string | null>(null);
 
   useEffect(() => {
+    document.title = "Enquiry Management | EmbeHome";
+  }, []);
+
+  useEffect(() => {
     fetchEnquiries();
   }, [fetchEnquiries]);
 
@@ -279,16 +284,8 @@ export default function AdminEnquiries() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <div
-                className="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-lg"
-                style={{ backgroundColor: "#009A9A" }}
-              >
-                E
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm leading-none">EmbeHome</p>
-                <p className="text-gray-400 text-xs mt-0.5 hidden sm:block">Admin Panel</p>
-              </div>
+              <BrandLogo size="sm" priority />
+              <p className="text-gray-500 text-sm font-medium">Admin Panel</p>
             </div>
             <button
               onClick={handleLogout}

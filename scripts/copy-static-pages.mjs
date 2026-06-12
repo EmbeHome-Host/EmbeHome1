@@ -10,6 +10,10 @@ const staticFolders = [
   "AlexaTestLogin",
   "privacypolicy",
   "google-home",
+  "lib",
+  "img",
+  "css",
+  "js",
 ];
 
 for (const folder of staticFolders) {

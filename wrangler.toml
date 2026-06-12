@@ -1,6 +1,16 @@
 name = "embehome-website"
 main = "worker/index.ts"
 compatibility_date = "2024-12-01"
+workers_dev = true
+
+# Route production domain to Worker (site + /api). Remove embehome.in from Pages custom domains.
+[[routes]]
+pattern = "embehome.in/*"
+zone_name = "embehome.in"
+
+[[routes]]
+pattern = "www.embehome.in/*"
+zone_name = "embehome.in"
 
 [assets]
 directory = "./dist"

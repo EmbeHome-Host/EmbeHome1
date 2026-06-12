@@ -32,8 +32,16 @@ export default function AdminLogin() {
       } else {
         setError("Invalid credentials. Please try again.");
       }
-    } catch {
-      setError("Unable to reach the server. Please try again.");
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "";
+      if (message === "Invalid credentials") {
+        setError("Invalid credentials. Please try again.");
+      } else {
+        setError(
+          message ||
+            "Unable to reach the server. Please try again."
+        );
+      }
     } finally {
       setLoading(false);
     }

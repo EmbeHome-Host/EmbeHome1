@@ -15,15 +15,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   });
 
   const login = async (username: string, password: string) => {
-    try {
-      const token = await loginAdmin(username, password);
-      sessionStorage.setItem("embehome_admin_token", token);
-      sessionStorage.setItem("embehome_admin", "true");
-      setIsLoggedIn(true);
-      return true;
-    } catch {
-      return false;
-    }
+    const token = await loginAdmin(username, password);
+    sessionStorage.setItem("embehome_admin_token", token);
+    sessionStorage.setItem("embehome_admin", "true");
+    setIsLoggedIn(true);
+    return true;
   };
 
   const logout = () => {

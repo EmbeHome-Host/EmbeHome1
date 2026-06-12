@@ -5,7 +5,12 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = path.join(root, "public");
 
-const staticFolders = ["GoogleOAuthLogin", "AlexaTestLogin"];
+const staticFolders = [
+  "GoogleOAuthLogin",
+  "AlexaTestLogin",
+  "privacypolicy",
+  "google-home",
+];
 
 for (const folder of staticFolders) {
   const source = path.join(root, folder);

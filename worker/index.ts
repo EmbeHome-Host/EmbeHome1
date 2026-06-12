@@ -177,6 +177,15 @@ const STATIC_PAGE_ROUTES: Record<string, string> = {
   "/AlexaTestLogin/": "/AlexaTestLogin/index.html",
   "/AlexaTestLogin/privacy": "/AlexaTestLogin/privacy.html",
   "/AlexaTestLogin/privacy/": "/AlexaTestLogin/privacy.html",
+  "/privacypolicy/embehome_pp.html": "/privacypolicy/embehome_pp.html",
+  "/google-home/fan": "/google-home/fan/index.html",
+  "/google-home/fan/": "/google-home/fan/index.html",
+  "/google-home/light": "/google-home/light/index.html",
+  "/google-home/light/": "/google-home/light/index.html",
+  "/google-home/blinds": "/google-home/blinds/index.html",
+  "/google-home/blinds/": "/google-home/blinds/index.html",
+  "/google-home/curtain": "/google-home/curtain/index.html",
+  "/google-home/curtain/": "/google-home/curtain/index.html",
 };
 
 function serveStaticPage(request: Request, env: Env): Promise<Response> | null {

@@ -282,12 +282,12 @@ export default function AdminEnquiries() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 sm:h-24">
+          <div className="flex items-center justify-between h-14">
             <BrandMark
-              size="lg"
+              size="md"
               priority
-              logoClassName="h-16 sm:h-20"
-              titleClassName="text-xl font-bold tracking-tight leading-none text-gray-900"
+              logoClassName="h-8 sm:h-9"
+              titleClassName="text-base font-bold tracking-tight leading-none text-gray-900"
               subtitle="Admin Panel"
             />
             <button

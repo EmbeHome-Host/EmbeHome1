@@ -23,16 +23,16 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+      <nav className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20 sm:h-24">
+          <div className="flex justify-between items-center h-14 sm:h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <BrandMark
                 size="lg"
                 priority
-                logoClassName="h-16 sm:h-20"
-                titleClassName="text-2xl font-bold tracking-tight leading-none text-gray-900"
+                logoClassName="h-8 sm:h-9"
+                titleClassName="text-base font-bold tracking-tight leading-none text-gray-900"
               />
             </Link>
 
@@ -100,7 +100,7 @@ export default function Layout() {
                 <BrandMark
                   size="lg"
                   inverse
-                  logoClassName="h-16 sm:h-20 brightness-0 invert opacity-95"
+                  logoClassName="h-8 sm:h-9 brightness-0 invert opacity-95"
                 />
               </div>
               <p className="text-sm text-gray-400 max-w-md">

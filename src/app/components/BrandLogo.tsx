@@ -1,10 +1,10 @@
 import embehomeLogo from "@/assets/embehome-logo.png";
 
 const sizeClasses = {
-  sm: "h-11",
-  md: "h-14",
-  lg: "h-16",
-  xl: "h-20",
+  sm: "h-7",
+  md: "h-8",
+  lg: "h-9",
+  xl: "h-10",
 } as const;
 
 interface BrandLogoProps {
@@ -22,8 +22,8 @@ export default function BrandLogo({
     <img
       src={embehomeLogo}
       alt="EmbeHome"
-      width={220}
-      height={64}
+      width={130}
+      height={40}
       fetchPriority={priority ? "high" : undefined}
       loading={priority ? undefined : "lazy"}
       decoding="async"
@@ -58,14 +58,14 @@ export function BrandMark({
 }: BrandMarkProps) {
   const titleClass =
     titleClassName ??
-    `text-lg font-bold tracking-tight leading-none ${
+    `text-base font-bold tracking-tight leading-none ${
       inverse ? "text-white" : "text-gray-900"
     }`;
 
   return (
     <div
       className={`flex ${
-        layout === "column" ? "flex-col items-center" : "items-center gap-3"
+        layout === "column" ? "flex-col items-center" : "items-center gap-2"
       }`}
     >
       <BrandLogo size={size} priority={priority} className={logoClassName} />

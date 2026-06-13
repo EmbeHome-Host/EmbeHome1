@@ -56,10 +56,10 @@ export default function AdminLogin() {
         <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-8 sm:p-10">
           <div className="flex flex-col items-center mb-8">
             <BrandMark
-              size="xl"
+              size="lg"
               priority
               layout="column"
-              logoClassName="h-24 sm:h-28"
+              logoClassName="h-10 sm:h-11"
               subtitle="Admin Portal"
             />
           </div>

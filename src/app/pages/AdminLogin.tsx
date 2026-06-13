@@ -55,7 +55,13 @@ export default function AdminLogin() {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-8 sm:p-10">
           <div className="flex flex-col items-center mb-8">
-            <BrandMark size="xl" priority layout="column" subtitle="Admin Portal" />
+            <BrandMark
+              size="xl"
+              priority
+              layout="column"
+              logoClassName="h-24 sm:h-28"
+              subtitle="Admin Portal"
+            />
           </div>
 
           <div className="text-center mb-8">

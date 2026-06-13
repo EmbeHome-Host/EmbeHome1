@@ -1,10 +1,10 @@
 import embehomeLogo from "@/assets/embehome-logo.png";
 
 const sizeClasses = {
-  sm: "h-9",
-  md: "h-11",
-  lg: "h-14",
-  xl: "h-16",
+  sm: "h-11",
+  md: "h-14",
+  lg: "h-16",
+  xl: "h-20",
 } as const;
 
 interface BrandLogoProps {
@@ -22,8 +22,8 @@ export default function BrandLogo({
     <img
       src={embehomeLogo}
       alt="EmbeHome"
-      width={180}
-      height={52}
+      width={220}
+      height={64}
       fetchPriority={priority ? "high" : undefined}
       loading={priority ? undefined : "lazy"}
       decoding="async"
